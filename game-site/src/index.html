@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>GameSite</title>
+  <title>Dead Shot</title>
   <base href="/">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <!-- Stylesheets -->
@@ -30,6 +30,22 @@
   <script src="assets/js/appear.js"></script>
   <script src="assets/js/wow.js"></script>
   <script src="assets/js/scrollbar.js"></script>
+
+  <script>
+    $(document).ready(() => {
+      if ($('.scroll-to-target').length) {
+        $(".scroll-to-target").on('click', function () {
+          var target = $(this).attr('data-target');
+          // animate
+          $('html, body').animate({
+            scrollTop: $(target).offset().top
+          }, 1500);
+        });
+      }
+    });
+
+  </script>
+
 </body>
 
 </html>

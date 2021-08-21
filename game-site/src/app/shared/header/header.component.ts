@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
 declare let $: any;
 
 @Component({
@@ -9,7 +8,7 @@ declare let $: any;
 })
 export class HeaderComponent implements OnInit {
 
-  constructor(private _router: Router) { }
+  constructor() { }
 
   ngOnInit(): void {
     $(window).on('scroll', () => {
@@ -45,7 +44,7 @@ export class HeaderComponent implements OnInit {
 
     var mobileMenuContent = $('.main-header .nav-outer .main-menu').html();
     $('.mobile-menu .menu-box .menu-outer').append(mobileMenuContent);
-    $('.sticky-header .main-menu').append(mobileMenuContent);
+    // $('.sticky-header .main-menu').append(mobileMenuContent);
 
     //Dropdown Button
     $('.mobile-menu li.dropdown .dropdown-btn').on('click', () => {
@@ -67,9 +66,5 @@ export class HeaderComponent implements OnInit {
         $('body').removeClass('mobile-menu-visible');
       }
     });
-  }
-
-  public fragmentRoute(baseURL: string, fragment: any): void {
-    this._router.navigate([baseURL], { fragment: fragment })
   }
 }

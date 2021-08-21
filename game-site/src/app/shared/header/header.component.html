@@ -12,7 +12,7 @@
           <div class="top-right">
             <ul class="info clearfix">
               <li><a href="tel:666-888-0000">666 888 0000</a></li>
-              <li><a href="mailto:needhelp@sintix.com">needhelp@sintix.com</a></li>
+              <li><a href="mailto:needhelp@deadshot.com">needhelp@deadshot.com</a></li>
             </ul>
           </div>
         </div>
@@ -25,9 +25,9 @@
         <div class="inner-container clearfix">
           <!--Logo-->
           <div class="logo-box">
-            <div class="logo"><a routerLink="/" title="Sintix - Digital Video Gaming and Consol HTML Template">
-                <img src="../../../assets/images/logo.png" alt="Sintix - Digital Video Gaming and Consol HTML Template"
-                  title="Sintix - Digital Video Gaming and Consol HTML Template"></a></div>
+            <div class="logo"><a routerLink="/" title="Dead Shot - The Best Crypto Video Game">
+                <img src="../../../assets/images/ds.png" alt="Dead Shot - The Best Crypto Video Game"
+                  title="Dead Shot - The Best Crypto Video Game"></a></div>
           </div>
 
           <!--Nav Box-->
@@ -36,18 +36,7 @@
             <div class="mobile-nav-toggler"><span class="icon flaticon-menu-2"></span></div>
 
             <!-- Main Menu -->
-            <nav class="main-menu navbar-expand-md navbar-light">
-              <div class="collapse navbar-collapse show clearfix" id="navbarSupportedContent">
-                <ul class="navigation clearfix">
-                  <li class="current dropdown"><a routerLink="">Home</a></li>
-                  <li><a (click)="fragmentRoute('','about')">About</a></li>
-                  <li><a (click)="fragmentRoute('','games')">Games</a></li>
-                  <li><a (click)="fragmentRoute('','gallery')">Gallery</a></li>
-                  <li><a (click)="fragmentRoute('','faq')">FAQ</a></li>
-                  <li><a (click)="fragmentRoute('','contact')">Contact</a></li>
-                </ul>
-              </div>
-            </nav>
+            <app-nav-items></app-nav-items>
             <!-- Main Menu End-->
 
             <ul class="social-links clearfix">
@@ -70,13 +59,13 @@
     <div class="auto-container clearfix">
       <!--Logo-->
       <div class="logo pull-left">
-        <a routerLink="/" title=""><img src="../../../assets/images/sticky-logo.png" alt="" title=""></a>
+        <a routerLink="/" title=""><img src="../../../assets/images/ds.png" alt="" title=""></a>
       </div>
       <!--Right Col-->
       <div class="pull-right">
         <!-- Main Menu -->
         <nav class="main-menu clearfix">
-          <!--Keep This Empty / Menu will come through Javascript-->
+          <app-nav-items></app-nav-items>
         </nav><!-- Main Menu End-->
       </div>
     </div>
