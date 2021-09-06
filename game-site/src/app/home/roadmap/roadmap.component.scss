@@ -1,0 +1,26 @@
+.roadmap-details {
+  display: none;
+
+  .text {
+    font-size: 18px;
+    color: #f7f7f7;
+  }
+}
+
+.news-block:hover {
+  .roadmap-details {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    animation: fadeIn 0.5s linear;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}

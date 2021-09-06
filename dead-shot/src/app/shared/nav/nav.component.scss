@@ -1,0 +1,90 @@
+.connect-btn {
+  position: relative;
+  right: 0;
+  top: 10px;
+  display: inline-block;
+  font-size: 12px;
+  line-height: 24px;
+  padding: 0px 12px;
+  color: #ffffff;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 10px;
+  overflow: hidden;
+
+  a {
+    position: relative;
+    display: block;
+    z-index: 1;
+    padding: 4px 12px;
+    letter-spacing: 1px;
+    line-height: 20px;
+    background: #ff7a21;
+    text-transform: uppercase;
+    color: #ffffff;
+    border-radius: 0px;
+    transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+
+    &:hover {
+      background-color: #ffffff;
+      color: #ff7a21;
+    }
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 5px;
+    top: 0px;
+    width: 20px;
+    height: 100%;
+    background: #ff7a21;
+    -webkit-transform: skew(-15deg);
+    -ms-transform: skew(-15deg);
+    transform: skew(-15deg);
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    right: 5px;
+    top: 0px;
+    width: 20px;
+    height: 100%;
+    background: #ff7a21;
+    -webkit-transform: skew(-15deg);
+    -ms-transform: skew(-15deg);
+    transform: skew(-15deg);
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
+
+  &:hover::before {
+    background-color: #ffffff;
+    color: #ff7a21;
+  }
+
+  &:hover::after {
+    background-color: #ffffff;
+    color: #ff7a21;
+  }
+}
+
+.metamask-icon {
+  position: absolute;
+  left: -30px;
+  transform: scale(0.5);
+  top: 15px;
+  z-index: 999;
+}
