@@ -1,0 +1,22 @@
+section {
+  padding-bottom: 50px;
+  background-color: #07070f;
+}
+
+.text {
+  position: relative;
+  font-size: 20px;
+  text-align: justify;
+  line-height: 1.5em;
+  font-weight: 400;
+  max-width: 650px;
+  letter-spacing: 0.02em;
+  margin: 0 auto;
+}
+
+@media only screen and (max-width: 767px) {
+  .text {
+    font-size: 18px;
+    font-weight: 300;
+  }
+}

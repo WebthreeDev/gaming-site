@@ -1,0 +1,17 @@
+::ng-deep {
+  .sticky-header {
+    .metamask-icon {
+      top: 2px !important;
+    }
+
+    .connect-btn {
+      top: 22px !important;
+    }
+  }
+}
+
+.header-upper {
+  img {
+    height: 128px;
+  }
+}
