@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { NavigationEnd, Router, ActivatedRoute } from '@angular/router';
 import { DownloadService } from 'src/app/services/download.service';
 import { Web3Service } from 'src/app/services/web3.service';
-import { debounceTime, distinctUntilChanged } from 'rxjs/operators';
 declare var $: any;
 
 @Component({
@@ -12,10 +11,8 @@ declare var $: any;
 })
 export class HeaderComponent implements OnInit {
 
-  public toggleMetamaskIconStatus: boolean = false;
-  public fragment: string = '';
 
-  constructor(private _router: Router, private _route: ActivatedRoute, private _download: DownloadService, private _web3: Web3Service) { }
+  constructor() { }
 
   ngOnInit(): void {
     $(window).on('scroll', () => {
@@ -25,13 +22,8 @@ export class HeaderComponent implements OnInit {
     this.initSubMenuToggle();
     this.initMobileMenuToggle();
     // this.checkWeb3();
-    this.routeChangeEvent();
   }
-  public routeChangeEvent() {
-    this._router.events.pipe(debounceTime(200), distinctUntilChanged()).subscribe(r => {
-      this.fragment = <string>this._route.snapshot.fragment;
-    });
-  }
+  
   public initHeaderStyle() {
     var windowpos = $(window).scrollTop();
     var siteHeader = $('.main-header');
@@ -80,25 +72,5 @@ export class HeaderComponent implements OnInit {
       }
     });
   }
-  public fragmentRoute(baseURL: string, fragment: any): void {
-    this._router.navigate([baseURL], { fragment: fragment })
-  }
-  public downloadLitePaper(): void {
-    this._download.exportPdf();
-  }
-  public navigateToPage(route: string): void {
-    this._router.navigate([route])
-  }
-  public checkWeb3() {
-    const web3InitStatus = this._web3.checkWeb3();
-    this.isWalletConnected(web3InitStatus)
-  }
-  public web3Init() {
-    const web3InitStatus = this._web3.checkAndInstantiateWeb3();
-    this.isWalletConnected(web3InitStatus)
-  }
-  public isWalletConnected(connectionStatus: string): void | boolean {
-    if (connectionStatus !== 'connected') return;
-    this.toggleMetamaskIconStatus = true;
-  }
+  
 }
