@@ -1,4 +1,4 @@
-const DOMAIN = 'https://beta.deadshot.net';
+const DOMAIN = 'https://deadshot.net';
 
 export const environment = {
   production: true,

@@ -1,0 +1,30 @@
+  <nav class="main-menu navbar-expand-md navbar-light">
+    <div class="collapse navbar-collapse show clearfix" id="navbarSupportedContent">
+      <ul class="navigation clearfix">
+        <li [ngClass]="{'current': fragment == ''}"><a (click)="fragmentRoute('/','')">Home</a></li>
+        <li [ngClass]="{'current': fragment == 'features'}"><a (click)="fragmentRoute('/','features')">Features</a>
+        </li>
+        <li [ngClass]="{'current': fragment == 'shop'}"><a (click)="fragmentRoute('/','shop')">shop</a></li>
+        <!-- <li><a (click)="navigateToPage('/shop')">shop</a></li> -->
+        <li [ngClass]="{'current': fragment == 'tokenomics'}"><a (click)="fragmentRoute('/','tokenomics')">tokenomics</a></li>
+        <li [ngClass]="{'current': fragment == 'roadmap'}"><a (click)="fragmentRoute('/','roadmap')">roadmap</a>
+        </li>
+        <li [ngClass]="{'current': fragment == 'forum'}"><a (click)="fragmentRoute('/','forum')">forum</a>
+        </li>
+        <li [ngClass]="{'current': fragment == 'litepaper'}"><a (click)="downloadLitePaper()">litepaper</a>
+        </li>
+        <li [ngClass]="{'current': fragment == 'download'}"><a (click)="fragmentRoute('/','download')">downloads</a>
+        </li>
+        <!-- <ul>
+    <li><a (click)="fragmentRoute('/','download')">OTHERS</a></li>
+  </ul> -->
+        <!-- <li>
+  <img *ngIf="!toggleMetamaskIconStatus else MetamaskActive" class="metamask-icon" src="assets/images/icons/metamask-offline.png" title="Metamask offline"/>
+  <ng-template #MetamaskActive>
+    <img class="metamask-icon" src="assets/images/icons/metamask-active.png" title="Metamask active"/>
+  </ng-template>
+  <div class="connect-btn" (click)="web3Init()"><a>connect</a></div>
+</li> -->
+      </ul>
+    </div>
+  </nav>
