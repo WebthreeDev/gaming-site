@@ -4,8 +4,7 @@
         <li [ngClass]="{'current': fragment == ''}"><a (click)="fragmentRoute('/','')">Home</a></li>
         <li [ngClass]="{'current': fragment == 'features'}"><a (click)="fragmentRoute('/','features')">Features</a>
         </li>
-        <li [ngClass]="{'current': fragment == 'shop'}"><a (click)="fragmentRoute('/','shop')"></a></li>
-        <li><a (click)="navigateToPage('#shop')">shop</a></li>
+        <li [ngClass]="{'current': fragment == 'shop'}"><a (click)="navigateToPage('/shop')">shop</a></li> -->
         <li [ngClass]="{'current': fragment == 'tokenomics'}"><a (click)="fragmentRoute('/','tokenomics')">tokenomics</a></li>
         <li [ngClass]="{'current': fragment == 'roadmap'}"><a (click)="fragmentRoute('/','roadmap')">roadmap</a>
         </li>
@@ -15,16 +14,16 @@
         </li>
         <li [ngClass]="{'current': fragment == 'download'}"><a (click)="fragmentRoute('/','download')">downloads</a>
         </li>
-        <ul>
-  <li><a (click)="fragmentRoute('/','download')"></a></li>
-  </ul>
-        <li>
+        <!-- <ul>
+    <li><a (click)="fragmentRoute('/','download')">OTHERS</a></li>
+  </ul> -->
+        <!-- <li>
   <img *ngIf="!toggleMetamaskIconStatus else MetamaskActive" class="metamask-icon" src="assets/images/icons/metamask-offline.png" title="Metamask offline"/>
   <ng-template #MetamaskActive>
     <img class="metamask-icon" src="assets/images/icons/metamask-active.png" title="Metamask active"/>
   </ng-template>
   <div class="connect-btn" (click)="web3Init()"><a>connect</a></div>
-</li>
+</li> -->
       </ul>
     </div>
   </nav>
