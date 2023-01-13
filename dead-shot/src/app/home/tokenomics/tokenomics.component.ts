@@ -31,24 +31,12 @@ export class TokenomicsComponent implements OnInit, OnDestroy {
 
     chart.data = [
       {
-        category: "Play To Earn",
-        percentage: 36
-      },
-      {
-        category: "Development",
-        percentage: 5
-      },
-      {
-        category: "Public sale",
-        percentage: 22
-      },
-      {
-        category: "Private sale",
-        percentage: 15
+        category: "Team",
+        percentage: 1
       },
       {
         category: "Liquidity",
-        percentage: 20
+        percentage: 98
       },
       {
         category: "Airdrop",

@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 
-// import * as marketPlaceArtifacts from '../../../build/contracts/MarketPlace.json';
+import  marketPlaceArtifacts from '../../../build/contracts/MarketPlace.json';
 
 declare let Web3: any, window: any;
 let { ethereum, web3 } = window;
@@ -40,18 +40,18 @@ export class Web3Service {
     return 'There is no account';
   }
 
-  // public getContract() {
-  //   return new Promise((resolve) => {
-  //     const web3 = window.web3;
-  //     let networkId;
-  //     web3.eth.net.getId()
-  //       .then((netId: any) => {
-  //         networkId = netId;
-  //         const abi = marketPlaceArtifacts.abi;
-  //         const networkAddress = marketPlaceArtifacts.networks[networkId].address;
-  //         const marketplace = new web3.eth.Contract(abi, networkAddress);
-  //         resolve(marketplace);
-  //       });
-  //   });
-  // }
+   public getContract() {
+     return new Promise((resolve) => {
+       const web3 = window.web3;
+       let networkId;
+       web3.eth.net.getId()
+         .then((netId: any) => {
+          networkId = netId;
+           const abi = marketPlaceArtifacts.abi;
+           const networkAddress = [networkId]
+           const marketplace = new web3.eth.Contract(abi, networkAddress);
+          resolve(marketplace);
+         });
+     });
+   }
 }
