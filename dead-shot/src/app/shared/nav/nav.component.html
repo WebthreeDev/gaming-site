@@ -5,7 +5,7 @@
         <li [ngClass]="{'current': fragment == 'features'}"><a (click)="fragmentRoute('/','features')">Features</a>
         </li>
         <li [ngClass]="{'current': fragment == 'shop'}"><a (click)="fragmentRoute('/','shop')"></a></li>
-        <li><a (click)="navigateToPage('/shop')">shop</a></li>
+        <li><a (click)="navigateToPage('#/shop')">shop</a></li>
         <li [ngClass]="{'current': fragment == 'tokenomics'}"><a (click)="fragmentRoute('/','tokenomics')">tokenomics</a></li>
         <li [ngClass]="{'current': fragment == 'roadmap'}"><a (click)="fragmentRoute('/','roadmap')">roadmap</a>
         </li>
